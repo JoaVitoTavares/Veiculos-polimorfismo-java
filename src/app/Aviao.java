@@ -2,57 +2,27 @@ package app;
 
 public class Aviao extends Veiculo {
 
-    public Aviao(String nome, Fabricante fabricante, int anoFabricacao, int capacidade) {
+    private int numeroTurbinas;
+    public Aviao(String nome, Fabricante fabricante, int anoFabricacao, int capacidade, int numeroTurbinas ) {
         super(nome, fabricante, anoFabricacao, capacidade);
+        this.numeroTurbinas = this.numeroTurbinas;
+    }
+
+    public String decolar(){
+        return "O avião decolou";
+    }
+
+    public String pousar(){
+        return "O avião pousou";
     }
 
     @Override
-    public String getNome() {
-        return super.getNome();
-    }
-
-    @Override
-    public void setNome(String nome) {
-        super.setNome(nome);
-    }
-
-    @Override
-    public Fabricante getFabricante() {
-        return super.getFabricante();
-    }
-
-    @Override
-    public void setFabricante(Fabricante fabricante) {
-        super.setFabricante(fabricante);
-    }
-
-    @Override
-    public int getAnoFabricacao() {
-        return super.getAnoFabricacao();
-    }
-
-    @Override
-    public void setAnoFabricacao(int anoFabricacao) {
-        super.setAnoFabricacao(anoFabricacao);
-    }
-
-    @Override
-    public int getCapacidade() {
-        return super.getCapacidade();
-    }
-
-    @Override
-    public void setCapacidade(int capacidade) {
-        super.setCapacidade(capacidade);
-    }
-
-    @Override
-    public void acelerar() {
-        super.acelerar();
+    public String acelerar() {
+        return "O avião acelerou";
     }
 
     @Override
     public String mostrarDetalhes() {
-        return super.mostrarDetalhes();
+        return String.format("O %s %s e possui %d turbinas", nome, super.mostrarDetalhes(), numeroTurbinas);
     }
 }

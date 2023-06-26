@@ -46,11 +46,13 @@ public abstract class Veiculo {
         this.capacidade = capacidade;
     }
 
-    public void acelerar(){}
+    public String acelerar(){
+        return "o Veiculo acelerou";
+    }
 
     public String mostrarDetalhes(){
-        return  "O veículo foi fabricado pela " + fabricante + " foi fabricado(a) em: " + anoFabricacao +
-                "e tem a capacidade de " + capacidade;
+        return  "foi fabricado pela " + fabricante.getNome() + " em: " + anoFabricacao + " no(a) "
+                + fabricante.getPaisDeOrigem() + " e tem a capacidade de " + capacidade + " pessoas.";
     }
 
 

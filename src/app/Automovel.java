@@ -19,58 +19,18 @@ public class Automovel extends Veiculo {
     }
 
     @Override
-    public String getNome() {
-        return super.getNome();
-    }
-
-    @Override
-    public void setNome(String nome) {
-        super.setNome(nome);
-    }
-
-    @Override
-    public Fabricante getFabricante() {
-        return super.getFabricante();
-    }
-
-    @Override
-    public void setFabricante(Fabricante fabricante) {
-        super.setFabricante(fabricante);
-    }
-
-    @Override
-    public int getAnoFabricacao() {
-        return super.getAnoFabricacao();
-    }
-
-    @Override
-    public void setAnoFabricacao(int anoFabricacao) {
-        super.setAnoFabricacao(anoFabricacao);
-    }
-
-    @Override
-    public int getCapacidade() {
-        return super.getCapacidade();
-    }
-
-    @Override
-    public void setCapacidade(int capacidade) {
-        super.setCapacidade(capacidade);
-    }
-
-    @Override
-    public void acelerar() {
-        super.acelerar();
+    public String acelerar() {
+        return "O carro acelerou";
     }
 
     @Override
     public String mostrarDetalhes() {
-        return String.format("%s e possui roda de diametro de: %d", super.mostrarDetalhes(), getDiametroRoda());
+        return String.format("O %s %s e possui roda de diametro de: %d cm", nome,super.mostrarDetalhes(), getDiametroRoda());
 
     }
 
     public String abrirPortaMalas() {
-       return "abrir portar malas";
+       return "O porta malas do carro foi aberto";
     }
 
 }

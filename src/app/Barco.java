@@ -2,58 +2,38 @@ package app;
 
 public class Barco extends Veiculo {
 
+    private int numeroVelas;
 
-    public Barco(String nome, Fabricante fabricante, int anoFabricacao, int capacidade) {
+    public Barco(String nome, Fabricante fabricante, int anoFabricacao, int capacidade, int numeroVelas) {
         super(nome, fabricante, anoFabricacao, capacidade);
+        this.numeroVelas = numeroVelas;
+    }
+
+    public int getNumeroVelas() {
+        return numeroVelas;
+    }
+
+    public void setNumeroVelas(int numeroVelas) {
+        this.numeroVelas = numeroVelas;
+    }
+
+    public String icarVelas()
+    {
+        return "O barco está com as velas içadas";
+    }
+
+    public String recolherVelas()
+    {
+        return "O barco está com as velas recolhidas";
     }
 
     @Override
-    public String getNome() {
-        return super.getNome();
-    }
-
-    @Override
-    public void setNome(String nome) {
-        super.setNome(nome);
-    }
-
-    @Override
-    public Fabricante getFabricante() {
-        return super.getFabricante();
-    }
-
-    @Override
-    public void setFabricante(Fabricante fabricante) {
-        super.setFabricante(fabricante);
-    }
-
-    @Override
-    public int getAnoFabricacao() {
-        return super.getAnoFabricacao();
-    }
-
-    @Override
-    public void setAnoFabricacao(int anoFabricacao) {
-        super.setAnoFabricacao(anoFabricacao);
-    }
-
-    @Override
-    public int getCapacidade() {
-        return super.getCapacidade();
-    }
-
-    @Override
-    public void setCapacidade(int capacidade) {
-        super.setCapacidade(capacidade);
-    }
-
-    @Override
-    public void acelerar() {
-        super.acelerar();
+    public String acelerar() {
+        return "O barco acelerou";
     }
 
     @Override
     public String mostrarDetalhes() {
-        return super.mostrarDetalhes();
+        return String.format("O %s %s e possui %d velas", nome, super.mostrarDetalhes(), numeroVelas);
     }
 }
